@@ -45,6 +45,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -56,6 +58,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -93,6 +96,8 @@ GameObject:
   - component: {fileID: 8835582639856596521}
   - component: {fileID: 2140298296249417611}
   - component: {fileID: 353955888}
+  - component: {fileID: -7525409993637110947}
+  - component: {fileID: -1597638453388916139}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -148,6 +153,8 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -159,6 +166,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -237,6 +245,94 @@ MonoBehaviour:
   items:
   - id: A1
     text: Hello!
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
+  - id: 1.0
+    text: 'hello traveler
+
+'
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options:
+    - text: hello depar
+      image: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1.1
+      enabled: 0
+    - text: the weather is fine
+      image: {fileID: 0}
+      audio: {fileID: 0}
+      targetId: 1.2
+      enabled: 0
+  - id: 1.1
+    text: merhaba
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
+  - id: 1.2
+    text: bebe
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
+--- !u!114 &-7525409993637110947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835582639856596533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450b86d94d0b945a48b3ba1ce41dcc52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: quest
+  desc: 
+  questInProgressConversation: {fileID: 353955888}
+  questCompletedConversation: {fileID: -1597638453388916139}
+  spawnMode: 0
+  enableOnQuestStart:
+  - {fileID: 0}
+  spawnOnQuestStart: []
+  requiredItems:
+  - item: {fileID: 0}
+    count: 0
+  spawnOnQuestComplete: []
+  rewardItems:
+  - {fileID: 0}
+  destroySpawnsOnQuestComplete: 1
+  introCutscenePrefab: {fileID: 0}
+  outroCutscenePrefab: {fileID: 0}
+  isStarted: 0
+  isFinished: 0
+--- !u!114 &-1597638453388916139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835582639856596533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd99916876a6405980838d7635b65cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - id: 1.1.1
+    text: asdasdadsasda
+    image: {fileID: 0}
+    audio: {fileID: 0}
+    quest: {fileID: 0}
+    options: []
+  - id: 1.1.2
+    text: 'thank you for the apple
+
+'
     image: {fileID: 0}
     audio: {fileID: 0}
     quest: {fileID: 0}
